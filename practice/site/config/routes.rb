@@ -1,6 +1,8 @@
 Sit::Application.routes.draw do
-  resources :statuses
+  devise_for :users
 
+  resources :statuses
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

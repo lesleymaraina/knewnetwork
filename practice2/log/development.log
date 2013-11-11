@@ -1,0 +1,4546 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-10-28 19:26:41 -0400
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (6ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (2.7ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateStatuses (20131028232722)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131028232722')[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-10-28 19:30:01 -0400
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-10-28 19:30:32 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (2.9ms)
+Compiled scaffolds.css  (32ms)  (pid 1148)
+Compiled statuses.css  (1ms)  (pid 1148)
+Compiled application.css  (50ms)  (pid 1148)
+Compiled jquery.js  (21ms)  (pid 1148)
+Compiled jquery_ujs.js  (0ms)  (pid 1148)
+Compiled statuses.js  (104ms)  (pid 1148)
+Compiled application.js  (186ms)  (pid 1148)
+Completed 200 OK in 338ms (Views: 315.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-28 19:30:32 -0400
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-28 19:30:32 -0400
+Served asset /statuses.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-28 19:30:32 -0400
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-28 19:30:32 -0400
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-28 19:30:32 -0400
+Served asset /statuses.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-28 19:30:32 -0400
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-28 19:30:32 -0400
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-10-31 16:39:24 -0400
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (49.3ms)
+  Rendered statuses/new.html.erb within layouts/application (102.0ms)
+Completed 200 OK in 165ms (Views: 124.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 16:39:24 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 16:39:24 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 16:39:24 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 16:39:24 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 16:39:24 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-10-31 16:39:38 -0400
+Processing by StatusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uij2RgX5b9un2r1ZvoLAm7K6QdWFPtXCbPXsUIMmETU=", "status"=>{"name"=>"Lesley", "content"=>"Im on TreeBook"}, "commit"=>"Create Status"}
+  [1m[35m (6.5ms)[0m  begin transaction
+  [1m[36mSQL (30.8ms)[0m  [1mINSERT INTO "statuses" ("content", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Im on TreeBook"], ["created_at", Thu, 31 Oct 2013 20:39:38 UTC +00:00], ["name", "Lesley"], ["updated_at", Thu, 31 Oct 2013 20:39:38 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/statuses/1
+Completed 302 Found in 46ms (ActiveRecord: 39.1ms)
+
+
+Started GET "/statuses/1" for 127.0.0.1 at 2013-10-31 16:39:38 -0400
+Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered statuses/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 16:39:38 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 16:39:38 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 16:39:38 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 16:39:38 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 16:39:38 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/1/edit" for 127.0.0.1 at 2013-10-31 17:14:08 -0400
+Connecting to database specified by database.yml
+Processing by StatusesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered statuses/_form.html.erb (10.0ms)
+  Rendered statuses/edit.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 108ms (Views: 77.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:09 -0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:09 -0400
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:09 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:09 -0400
+Served asset /jquery.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:09 -0400
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:09 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:09 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started PUT "/statuses/1" for 127.0.0.1 at 2013-10-31 17:14:11 -0400
+Processing by StatusesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uij2RgX5b9un2r1ZvoLAm7K6QdWFPtXCbPXsUIMmETU=", "status"=>{"name"=>"Lesley", "content"=>"Im on TreeBook"}, "commit"=>"Update Status", "id"=>"1"}
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/statuses/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/statuses/1" for 127.0.0.1 at 2013-10-31 17:14:11 -0400
+Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered statuses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:11 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:11 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:11 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:11 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:11 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:11 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:11 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2013-10-31 17:14:13 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:13 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:13 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:13 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:13 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:13 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:13 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:13 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/statuses/1" for 127.0.0.1 at 2013-10-31 17:14:16 -0400
+Processing by StatusesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uij2RgX5b9un2r1ZvoLAm7K6QdWFPtXCbPXsUIMmETU=", "id"=>"1"}
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (6.2ms)[0m  [1mDELETE FROM "statuses" WHERE "statuses"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/statuses
+Completed 302 Found in 11ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2013-10-31 17:14:16 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:16 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:16 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:16 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:16 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:16 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:16 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:16 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2013-10-31 17:14:42 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:42 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:42 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:42 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:42 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:42 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:42 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:42 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2013-10-31 17:14:59 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:59 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:59 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:59 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:59 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:59 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 17:14:59 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 17:14:59 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2013-10-31 17:25:26 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 17:25:26 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 17:25:26 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 17:25:26 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-31 17:25:26 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 17:25:26 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-31 17:25:26 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 17:25:26 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-10-31 17:25:51 -0400
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (2.1ms)
+  Rendered statuses/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 17:25:51 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-31 17:25:51 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 17:25:51 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 17:25:51 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-31 17:25:51 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 17:25:51 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 17:25:51 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-10-31 17:26:07 -0400
+Processing by StatusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uij2RgX5b9un2r1ZvoLAm7K6QdWFPtXCbPXsUIMmETU=", "status"=>{"name"=>"Lesley M Chapman", "content"=>"Hello world"}, "commit"=>"Create Status"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (93.9ms)[0m  INSERT INTO "statuses" ("content", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Hello world"], ["created_at", Thu, 31 Oct 2013 21:26:07 UTC +00:00], ["name", "Lesley M Chapman"], ["updated_at", Thu, 31 Oct 2013 21:26:07 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/statuses/2
+Completed 302 Found in 98ms (ActiveRecord: 94.6ms)
+
+
+Started GET "/statuses/2" for 127.0.0.1 at 2013-10-31 17:26:07 -0400
+Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered statuses/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 17:26:07 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 17:26:07 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:07 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 17:26:07 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:07 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:07 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:07 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/2/edit" for 127.0.0.1 at 2013-10-31 17:26:16 -0400
+Processing by StatusesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered statuses/_form.html.erb (2.4ms)
+  Rendered statuses/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 17:26:16 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 17:26:16 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:16 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 17:26:16 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:16 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:16 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:16 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2013-10-31 17:26:20 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-31 17:26:20 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-31 17:26:20 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:20 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-10-31 17:26:20 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:20 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-31 17:26:20 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-02 22:19:14 -0400
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:19:20 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (4.5ms)
+Compiled bootstrap.css  (0ms)  (pid 425)
+Compiled application.css  (10ms)  (pid 425)
+Compiled bootstrap.js  (0ms)  (pid 425)
+Compiled application.js  (9ms)  (pid 425)
+Completed 200 OK in 142ms (Views: 98.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:19:20 -0400
+Served asset /bootstrap.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:19:20 -0400
+Served asset /bootstrap.js - 200 OK (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:19:20 -0400
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:19:20 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:19:20 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:19:20 -0400
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:19:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:19:20 -0400
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:19:20 -0400
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:21:31 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.4ms)
+Compiled scaffolds.css  (11ms)  (pid 425)
+Compiled application.css  (2ms)  (pid 425)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:21:31 -0400
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:21:31 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:21:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:21:31 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:21:31 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:21:31 -0400
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:21:31 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:21:31 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:21:31 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:27:28 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:27:28 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:27:28 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:27:28 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:27:28 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:27:28 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:27:28 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:27:28 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:27:28 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:27:28 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:28:09 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:28:09 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:28:09 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:28:09 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:28:09 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:28:09 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:28:09 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:28:09 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:28:09 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:28:09 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:36:27 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:36:27 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:36:27 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:36:27 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:36:27 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:36:27 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:36:27 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:36:27 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:36:27 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:36:27 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:37:03 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dist/css/bootstrap.css" for 127.0.0.1 at 2013-11-02 22:37:03 -0400
+
+ActionController::RoutingError (No route matches [GET] "/dist/css/bootstrap.css"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/statuses/navbar.css" for 127.0.0.1 at 2013-11-02 22:37:03 -0400
+Processing by StatusesController#show as CSS
+  Parameters: {"id"=>"navbar"}
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "navbar"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Status with id=navbar):
+  app/controllers/statuses_controller.rb:16:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.8ms)
+
+
+Started GET "/docs-assets/ico/favicon.png" for 127.0.0.1 at 2013-11-02 22:37:03 -0400
+
+ActionController::RoutingError (No route matches [GET] "/docs-assets/ico/favicon.png"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:37:15 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:37:15 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:37:15 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:37:15 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:37:15 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:37:15 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:37:15 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:37:15 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:37:15 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:37:15 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:45:02 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:45:02 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:45:02 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:45:02 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:45:02 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:45:02 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:45:02 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:45:02 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:45:02 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:45:02 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:46:08 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:46:08 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:46:08 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:46:08 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:46:08 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:46:08 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:46:08 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:46:08 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:46:08 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:46:08 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:47:53 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:47:53 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:47:53 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:47:53 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:47:53 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:47:53 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:47:53 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:47:53 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:47:53 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:47:53 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:48:11 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:48:11 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:48:11 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:48:11 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:48:11 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:48:11 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:48:11 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:48:11 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:48:11 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:48:11 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:49:48 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:49:48 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:49:48 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:49:48 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:49:48 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:49:48 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:49:48 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:49:48 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:49:48 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:49:48 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:50:16 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:50:16 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:50:16 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:50:16 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:50:16 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:50:16 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:50:16 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:50:16 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:50:16 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:50:16 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:51:24 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:51:24 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:51:24 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:51:24 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:51:24 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:51:24 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:51:24 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:51:24 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:51:24 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:51:24 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:54:37 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.4ms)
+Compiled bootstrap 2.css  (0ms)  (pid 425)
+Compiled application.css  (28ms)  (pid 425)
+Compiled bootstrap 2.js  (0ms)  (pid 425)
+Compiled application.js  (9ms)  (pid 425)
+Completed 200 OK in 108ms (Views: 106.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 22:54:38 -0400
+Served asset /bootstrap%202.css - 200 OK (12ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:54:38 -0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:54:38 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:54:38 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 22:54:38 -0400
+Served asset /bootstrap%202.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:54:38 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:54:38 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:54:38 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:54:38 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:54:38 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:54:38 -0400
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Compiled bootstrap-theme.css  (0ms)  (pid 425)
+Compiled application.css  (28ms)  (pid 425)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /bootstrap-theme.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 22:58:43 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:13 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:01:58 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 23:29:50 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:29:50 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:29:51 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:29:51 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:29:51 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:29:51 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:29:51 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:29:51 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:29:51 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:29:51 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:29:51 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:29:51 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:29:51 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:32:23 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:33:12 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:42:48 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:48:33 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.3ms)
+Compiled application.css  (1ms)  (pid 425)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:50:28 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:53:07 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (9.5ms)
+  Rendered statuses/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:54:32 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (1.7ms)
+  Rendered statuses/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:55:40 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (2.4ms)
+  Rendered statuses/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-02 23:56:25 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:22:38 -0500
+Connecting to database specified by database.yml
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 150ms (Views: 94.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:22:39 -0500
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/statuses/2" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStatus Load (0.3ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered statuses/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:09 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/2/edit" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Processing by StatusesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered statuses/_form.html.erb (10.4ms)
+  Rendered statuses/edit.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:25:39 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:31:37 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:31:37 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:31:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:31:38 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:31:38 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:31:38 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:31:38 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:31:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:31:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:31:38 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:31:38 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:31:38 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:31:38 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:17 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:33:49 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:35:15 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:09 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:37:38 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:38:54 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:44:58 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:45:28 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Compiled statuses.css  (12ms)  (pid 321)
+Compiled application.css  (2ms)  (pid 321)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /statuses.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:46:50 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.2ms)
+Compiled statuses.css  (3ms)  (pid 321)
+Compiled application.css  (2ms)  (pid 321)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /statuses.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:47:31 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (0.9ms)
+Compiled statuses.css  (3ms)  (pid 321)
+Compiled application.css  (2ms)  (pid 321)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /statuses.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 19:48:23 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (0.9ms)
+Compiled statuses.css  (3ms)  (pid 321)
+Compiled application.css  (2ms)  (pid 321)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /statuses.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 21:05:14 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (0.9ms)
+Compiled statuses.css  (4ms)  (pid 321)
+Compiled application.css  (2ms)  (pid 321)
+Compiled statuses.js  (107ms)  (pid 321)
+Compiled application.js  (5ms)  (pid 321)
+Completed 200 OK in 195ms (Views: 194.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /statuses.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 21:11:45 -0500
+Served asset /statuses.js - 200 OK (1ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.6ms)
+Compiled statuses.js  (79ms)  (pid 321)
+Compiled application.js  (4ms)  (pid 321)
+Completed 200 OK in 135ms (Views: 134.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /statuses.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 21:13:33 -0500
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (0.9ms)
+Compiled statuses.css  (5ms)  (pid 321)
+Compiled application.css  (2ms)  (pid 321)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /statuses.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 21:15:12 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 21:16:59 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:00 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (2.4ms)
+  Rendered statuses/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 21:19:02 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:44 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (1.9ms)
+  Rendered statuses/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 21:21:46 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-03 21:22:13 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-07 21:14:10 -0500
+Connecting to database specified by database.yml
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 141ms (Views: 97.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-07 21:14:10 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-07 21:14:10 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-07 21:14:10 -0500
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-07 21:14:11 -0500
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-07 21:14:11 -0500
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-07 21:14:11 -0500
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-07 21:14:11 -0500
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-07 21:14:11 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-07 21:14:11 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-07 21:14:11 -0500
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-07 21:14:11 -0500
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-07 21:14:11 -0500
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-07 21:18:12 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/" for 127.0.0.1 at 2013-11-07 21:22:49 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+ERROR: compiling _app_views_statuses_index_html_erb__1580903129108049872_2179559520 RAISED /Users/lesleychapman/knewnetwork/practice/site/app/views/statuses/index.html.erb:14: syntax error, unexpected '<', expecting ')'
+		<span class="admin">
+		 ^
+/Users/lesleychapman/knewnetwork/practice/site/app/views/statuses/index.html.erb:15: syntax error, unexpected '|'
+			| <%= link_to "Edit", edit_sta...
+			 ^
+/Users/lesleychapman/knewnetwork/practice/site/app/views/statuses/index.html.erb:16: syntax error, unexpected '(', expecting ')'
+			');@output_buffer.append= ( link_to "Delete", status, me...
+			                           ^
+Function body:           def _app_views_statuses_index_html_erb__1580903129108049872_2179559520(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "statuses/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div class="page-header">
+<h1>All of the Statuses</h1>
+</div>
+
+');@output_buffer.append= ( link_to "Post a New Status", new_status_path, class: "btn btn-success" );@output_buffer.safe_concat('
+'); @statuses.each do |status| ;@output_buffer.safe_concat(' //status loop 
+
+<div class="status">
+	<strong>');@output_buffer.append= ( status.name );@output_buffer.safe_concat('</strong>
+	<p>');@output_buffer.append= ( status.content );@output_buffer.safe_concat('</p>
+	<div class="meta">
+		');@output_buffer.append= ( link_to time_ago_in_words(status.created_at) + " ago", status );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		// ');@output_buffer.append= ( link_to is a method that links to urls
+		<span class="admin">
+			| <%= link_to "Edit", edit_status_path(status) );@output_buffer.safe_concat(' |
+			');@output_buffer.append= ( link_to "Delete", status, method: :delete, data: {confirm: "Are you sure want to delete this status?"} );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		</span>
+	</div>
+');end 
+@output_buffer.safe_concat('
+  
+
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `module_eval'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `compile'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:232:in `compile!'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:144:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:125:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/template.rb:143:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:88:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/Users/lesleychapman/knewnetwork/practice/site/app/controllers/statuses_controller.rb:7:in `index'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:167:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:414:in `_run__3650945074804624948__process_action__1304309111771012116__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:121:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:45:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal.rb:203:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_controller/metal.rb:246:in `block in action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/query_cache.rb:64:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `_run__3710717329765989564__call__1788292146817068282__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-3.2.12/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered statuses/index.html.erb within layouts/application (28.8ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (/Users/lesleychapman/knewnetwork/practice/site/app/views/statuses/index.html.erb:14: syntax error, unexpected '<', expecting ')'
+		<span class="admin">
+		 ^
+/Users/lesleychapman/knewnetwork/practice/site/app/views/statuses/index.html.erb:15: syntax error, unexpected '|'
+			| <%= link_to "Edit", edit_sta...
+			 ^
+/Users/lesleychapman/knewnetwork/practice/site/app/views/statuses/index.html.erb:16: syntax error, unexpected '(', expecting ')'
+			');@output_buffer.append= ( link_to "Delete", status, me...
+			                           ^):
+    11: 	<div class="meta">
+    12: 		<%= link_to time_ago_in_words(status.created_at) + " ago", status %>
+    13: 		// <%= link_to is a method that links to urls
+    14: 		<span class="admin">
+    15: 			| <%= link_to "Edit", edit_status_path(status) %> |
+    16: 			<%= link_to "Delete", status, method: :delete, data: {confirm: "Are you sure want to delete this status?"} %>
+    17: 		</span>
+  app/controllers/statuses_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (4.3ms)
+  Rendered statuses/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:38 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (1.6ms)
+  Rendered statuses/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:50 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-07 21:25:53 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (1.7ms)
+  Rendered statuses/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-07 21:32:51 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Processing by StatusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CTtoCAI5A56zia4c5lEshYLjpFYHcOuX4aTFCpDWBjY=", "status"=>{"name"=>"Carlynn", "content"=>"Hi There!"}, "commit"=>"Create Status"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.5ms)[0m  INSERT INTO "statuses" ("content", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Hi There!"], ["created_at", Fri, 08 Nov 2013 02:33:06 UTC +00:00], ["name", "Carlynn"], ["updated_at", Fri, 08 Nov 2013 02:33:06 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/statuses/3
+Completed 302 Found in 15ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/statuses/3" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStatus Load (0.3ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered statuses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:06 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-07 21:33:09 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/statuses" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 105ms (Views: 62.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-07 22:26:50 -0500
+Served asset /application.js - 304 Not Modified (10ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateStatuses (20131028232722)
+Migrating to DeviseCreateUsers (20131109015613)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "profile_name" varchar(255), "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131109015613')[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (15.4ms)
+  Rendered statuses/new.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 153ms (Views: 118.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /statuses.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /jquery.js - 304 Not Modified (40ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:44 -0500
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-08 21:02:48 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/users/sign_up" for 127.0.0.1 at 2013-11-08 21:03:40 -0500
+
+ActionController::RoutingError (No route matches [GET] "/statuses/users/sign_up"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/devise-3.2.0/app/views/devise/shared/_links.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/devise-3.2.0/app/views/devise/registrations/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 58ms (Views: 15.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 21:04:55 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpAmU3+wTB0n7EOKRyjdv2wD09alw/mey0QHl5yw+2A=", "user"=>{"email"=>"lesley.m@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'lesley.m@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/devise-3.2.0/app/views/devise/shared/_links.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/devise-3.2.0/app/views/devise/registrations/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 155ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 21:05:28 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-11-08 21:05:39 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpAmU3+wTB0n7EOKRyjdv2wD09alw/mey0QHl5yw+2A=", "user"=>{"email"=>"lesley.m@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lesley.m@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (5.9ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "first_name", "last_name", "last_sign_in_at", "last_sign_in_ip", "profile_name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 09 Nov 2013 02:05:39 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "lesley.m@gmail.com"], ["encrypted_password", "$2a$10$B29QevaUNWaZblje2L/rlu56FJ7OQX3bpEIAyLkRqyg5qtzhV/d.S"], ["first_name", nil], ["last_name", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["profile_name", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sat, 09 Nov 2013 02:05:39 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2013-11-09 02:05:39.447367', "current_sign_in_at" = '2013-11-09 02:05:39.447367', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2013-11-09 02:05:39.448259' WHERE "users"."id" = 1
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 109ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-08 21:05:39 -0500
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2013-11-08 21:05:52 -0500
+
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-08 21:06:01 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-08 21:06:01 -0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-08 21:06:16 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-08 21:06:16 -0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-08 21:06:41 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-08 21:06:41 -0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-08 21:06:51 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-08 21:06:51 -0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (2.0ms)
+  Rendered statuses/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 21:06:55 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.css?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /bootstrap%202.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /bootstrap-theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap%202.js?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /bootstrap%202.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /statuses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 21:07:00 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-08 21:07:53 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-08 21:07:53 -0500
+Served asset /rails.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-08 21:25:15 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 68ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-08 21:25:15 -0500
+Served asset /rails.png - 304 Not Modified (3ms)
